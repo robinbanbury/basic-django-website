@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Robinio do Smeet</title>
+    <meta charset="utf-8" />
+    <!-- Django/Jinja - load all files in 'static' folder -->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type="text/css" />
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+    <!-- Django/Jinja -->
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <!-- This is Django/Jinja logic. This is a Django/Jinja variable: {{var}}-->
+</body>
+
+</html>
