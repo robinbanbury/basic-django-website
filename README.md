@@ -33,5 +33,6 @@ DATABASES = {
 }
 ```
 * Reload your app in the PythonAnywhere UI, under the 'Web' tab.
+* If this were a private repository, we'd also need deploy keys to clone the repo, but it's not.
 
 This has been adapted from PythonAnywhere's tutorial, available [here](https://help.pythonanywhere.com/pages/DjangoTutorial/)
