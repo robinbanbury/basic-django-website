@@ -18,7 +18,7 @@ import sys
  application = get_wsgi_application()
 ```
 Where `<user>` is your username, `<project_root>` is the ROOT of the entire project and `<settings_folder>` is the folder that contains your `settings.py`
-* In the folder with your `settings.py`, open `sk.py` and provide your `SECRET_KEY`
+* In the folder with your `settings.py`, open `local_settings.py` and provide your `SECRET_KEY` and `ALLOWED_HOSTS`. You can also configure the location and name of the log file here.
 * This project **doesn't** contain any database content, so some setup work is needed:
     * Migrate your databases (the models already exist): `python manage.py migrate`
     * Create an admin user: `python manage.py createsuperuser`
