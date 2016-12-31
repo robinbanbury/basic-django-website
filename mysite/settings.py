@@ -35,8 +35,15 @@ except ImportError as e:
 from .local_settings import SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-from .local_settings import ALLOWED_HOSTS
+try:
+    from .local_settings import DEBUG
+except ImportError as e:
+    # No problem if the value hasn't been defined; just use a default.
+    DEBUG = False
+
+# If DEBUG is switched off, we need a list of allowed hosts
+if not DEBUG:
+    from .local_settings import ALLOWED_HOSTS
 
 
 # Application definition
